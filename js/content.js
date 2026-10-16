@@ -22,12 +22,30 @@ window.SITE = {
     ratio: 1.7768,   /* the picture's width divided by its height */
     intro: 'Follow the lantern-lit path. Tap a lantern to open a memory, or press Begin.',
     points: [
-      { x:58, y:88, date:'Date 1', title:'Where it all began',  text:'Placeholder: how and when it started, in a line or two.',      photo:'' },
-      { x:67, y:80, date:'Date 2', title:'Our first trip',      text:'Placeholder: a moment you both still laugh about.',           photo:'' },
-      { x:77, y:73, date:'Date 3', title:'The hard part',       text:'Placeholder: a time that made you stronger together.',        photo:'' },
-      { x:83, y:67, date:'Date 4', title:'Moving closer',       text:'Placeholder: the day things got serious.',                    photo:'' },
-      { x:87, y:60, date:'Date 5', title:'The question',        text:'Placeholder: the proposal, in your words.',                   photo:'' },
-      { x:86, y:53, date:'Date 6', title:'And now',             text:'Placeholder: where you are today, and where the path leads.', photo:'' }
+      { x:58, y:88, date:'15 Aug 2017',  title:'The first time I saw you', text:'I did not know it yet, but this is where our story starts.', photo:'' },
+      { x:67, y:80, date:'7 Jan 2020',   title:'Our first outing',         text:'The first time it was just the two of us.',                   photo:'' },
+      { x:77, y:73, date:'13 Dec 2022',  title:'We start dating',          text:'The day we became us.',                                       photo:'' },
+      { x:83, y:67, date:'13 Dec 2025',  title:'I asked',                  text:'Three years to the day, I asked you to marry me.',            photo:'' },
+      { x:87, y:60, date:'11 Oct 2026',  title:'Engaged',                  text:'Now it is official, with our families around us.',            photo:'' },
+      { x:86, y:53, date:'15 May 2027',  title:'Married',                  text:'The day this path has been leading to.',                      photo:'' }
+    ]
+  },
+
+  /* ---- Places page: our favourite places in Mumbai ----
+     icon = emoji   note = one line about the memory (leave '' for none; it shows when she taps the card) */
+  places: {
+    intro: 'Tap a place to remember it.',
+    list: [
+      { icon:'🎓', name:'Somaiya University', note:'' },
+      { icon:'🧃', name:'Patil Juice Center', note:'' },
+      { icon:'🌸', name:'Blossoms',           note:'' },
+      { icon:'🥞', name:'Narayan Dosa',       note:'' },
+      { icon:'🛍️', name:'Palladium Mall',     note:'' },
+      { icon:'🌉', name:'Sealink',            note:'' },
+      { icon:'🚉', name:'CST',                note:'' },
+      { icon:'🛕', name:'Babulnath Mandir',   note:'' },
+      { icon:'🌳', name:'Hanging Gardens',    note:'' },
+      { icon:'🍝', name:'WTC Pasta',          note:'' }
     ]
   },
 
@@ -70,13 +88,20 @@ window.SITE = {
     image: 'assets/backdrops/letter.jpg',
     ratio: 2.0,
     envelope: { x:75, y:80, w:18, h:13 },
-    greeting: 'My Kinnari,',
+    greeting: 'To my Kinnari, ❤️',
     paragraphs: [
-      'Placeholder: the first paragraph of your letter. Say the thing you would say if you had the whole evening.',
-      'Placeholder: a memory only the two of you would recognise, and what it taught you about her.',
-      'Placeholder: what you hope for the two of you, from the wedding onwards.'
+      "Happy birthday, my love.",
+      "Sometimes I wish I could just skip the distance, the time zones, and all the planning it takes to be together. I wish I could be there when you wake up, annoy you in person, make you laugh over the silliest things, and end the day right next to you. Not through a screen, not through a call. Just there.",
+      "Until I can do that, I wanted to make you something that feels a little like us. A place filled with our memories, our little moments, the things that make me smile about you, and all the things we still have ahead of us.",
+      "When I think about us, I don't just think about the big moments. I think about the ordinary ones, too. The conversations that go on longer than they should, the random things that become inside jokes, the way even the simplest day feels different when you're part of it. Somewhere along the way, you became the person I want to tell everything to, whether it's something important or something completely ridiculous.",
+      "And now, when I imagine the future, I don't just picture the big milestones. I picture the everyday life we'll build together. Waking up in the same home, figuring things out as a team, travelling to places we've dreamed about, and making new memories out of days that might seem ordinary to everyone else.",
+      "I know we still have distance to get through and a lot of life ahead of us. But I'm excited for all of it, because it's a life I get to build with you.",
+      "So today, I hope you feel as loved as you make me feel. I hope this next year brings you happiness, new experiences, little surprises, and a hundred reasons to smile. And I hope that whenever you miss me, this little corner of the internet reminds you that, no matter how far apart we are, there's someone on the other side of the world who is always rooting for you, thinking about you, and looking forward to coming home to you.",
+      "Happy birthday, Kinnari.",
+      "Here's to you, to us, and to all the chapters we haven't written yet.",
+      "I love you. ❤️"
     ],
-    sign: 'Always yours, Saiyam'
+    sign: 'Forever yours,\nSaiyam'
   },
 
   /* ---- 52 Reasons I Love You ----
@@ -153,14 +178,14 @@ window.SITE = {
     ratio: 2.0,
     intro: 'Everything pinned here is something we want to do together. Tap a card to open it.',
     dreams: [
-      { x:21.8, y:18.6, w:10.7, h:24.5, when:'Someday',    title:'Our first home',           text:'Placeholder: what the place looks like, and who gets the good chair.' },
-      { x:40.7, y:19.2, w:9.4,  h:23,   when:'Soon',       title:'A very good dog',          text:'Placeholder: a golden retriever, obviously. Name pending.' },
-      { x:64.9, y:24.2, w:9.1,  h:23,   when:'Every year', title:'A birthday ritual',        text:'Placeholder: one thing we do on every 29 October, no matter what.' },
-      { x:21,   y:52.5, w:10.5, h:24.8, when:'Someday',    title:'Learn something together', text:'Placeholder: a class, a language, a sport we are both terrible at.' },
-      { x:45.4, y:58.4, w:9.6,  h:23.5, when:'Every week', title:'A slow Sunday',            text:'Placeholder: what a perfect ordinary Sunday looks like.' },
-      { x:62.3, y:61.8, w:8.2,  h:21.6, when:'One day',    title:'Sunrise somewhere new',    text:'Placeholder: a place we want to be awake for.' },
-      { x:50.9, y:32.7, w:13.6, h:27,   when:'21 May',     title:'The big map',              text:'Placeholder: Europe first, then everywhere else on the list.' },
-      { x:32,   y:41.9, w:5.5,  h:15.6, when:'Always',     title:'The compass',              text:'Placeholder: whichever way we go, we go together.' }
+      { x:16.1, y:10.7, w:15.1, h:31.2, when:'Someday',    title:'Our first home',           text:'A big, cozy living room, and a big bookshelf waiting to be filled.' },
+      { x:17.6, y:43.3, w:12.2, h:28.1,   when:'Soon',       title:'A very good dog',          text:'A golden retriever, obviously. Name pending.' },
+      { x:32.8, y:16.6, w:7.4, h:21.4,   when:'Every year', title:'A birthday ritual',        text:'Every 29 October, we give something away. Because the best way to celebrate is to share.' },
+      { x:42.7, y:12.2, w:13.6, h:26.4, when:'Someday',    title:'Learn lawn tennis',         text:'We learn it together, and we are both allowed to be terrible at it.' },
+      { x:53.7, y:41, w:15.4, h:26.2, when:'Every week', title:'A slow Sunday',            text:'The two of us on the sofa, cuddled up, reading a book.' },
+      { x:63.2, y:16.1, w:14, h:27.5, when:'One day',    title:'Sunrise somewhere new',    text:'A place we have never been, and a morning we are both awake for.' },
+      { x:32, y:38.7, w:20.1, h:25.3,   when:'21 May 2027',     title:'The big map',              text:'Switzerland, Belgium, the Netherlands, Norway, Turkey, New Zealand, Portugal and Spain.' },
+      { x:74.7, y:46.4, w:3.4, h:14.7, when:'Always',     title:'A little promise',              text:'Whichever way we go, we go together.' }
     ]
   },
 
@@ -170,7 +195,7 @@ window.SITE = {
   trip: {
     image: 'assets/backdrops/next.jpg',
     ratio: 2.0,
-    dateLabel: '21 May',
+    dateLabel: '21 May 2027',
     title: 'Until we fly to Europe',
     intro: 'Tap the passports, the suitcase and the backpack to see the plan.',
     items: [
@@ -180,12 +205,13 @@ window.SITE = {
     ]
   },
 
-  /* ---- the two companions that stand in the corner of every full page ----
-     idle = the resting picture      say = pictures used while talking (taken in turn)      hint = picture used for hints
-     Her pictures are flipped so she faces him. */
+  /* ---- the two companions that can stand in the corner of every full page ----
+     Switched OFF for now: both idle pictures are empty. To bring them back, set
+       him.idle = 'assets/characters/him-idle.png'   and   her.idle = 'assets/characters/her-idle.png'
+     (and the say / hint pictures: him-smug, him-sheepish, him-glasses, her-smug, her-tuck, her-shy). */
   crew: {
-    him: { idle:'assets/characters/him-idle.png', say:['assets/characters/him-smug.png','assets/characters/him-sheepish.png','assets/characters/him-glasses.png'], hint:'assets/characters/him-glasses.png' },
-    her: { idle:'assets/characters/her-idle.png', say:['assets/characters/her-smug.png','assets/characters/her-tuck.png','assets/characters/her-shy.png'], hint:'assets/characters/her-smug.png' }
+    him: { idle:'', say:[], hint:'' },
+    her: { idle:'', say:[], hint:'' }
   },
 
   /* ---- Spotify ---- */
@@ -208,7 +234,7 @@ window.SITE = {
     { id:'letter',   x:10, y:81, icon:'💌', title:'Letter',          desc:'A letter, written just for you.',                  tag:'Unlocked' },
     { id:'movie',    x:62, y:90, icon:'🎬', title:'Movie',           desc:'A short film of us.',                              tag:'Unlocked' },
     { id:'archive',  x:83, y:88, icon:'🐶', title:'Kinnari Archive', desc:'Messages from the people who love you.',           tag:'Unlocked' },
-    { id:'places',   x:68, y:72, icon:'📍', title:'Places',          desc:'A map with a pin for every place we have been.',   tag:'Open from the start' },
+    { id:'places',   x:68, y:72, icon:'📍', title:'Places',          desc:'Our favourite places in Mumbai.',   tag:'Open from the start' },
     { id:'future',   x:47, y:70, icon:'✨', title:'Future',          desc:'A dream board of what we want to do together.',    tag:'Unlocked' },
     { id:'count',    x:89, y:40, icon:'⏰', title:'Countdown',       desc:'Live countdown to our wedding.',                   tag:'Just for fun', left:true },
     { id:'next',     x:55, y:80, icon:'🧭', title:'Next Adventure',  desc:'Europe, right after the wedding.',                 tag:'Unlocked' },

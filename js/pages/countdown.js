@@ -17,7 +17,7 @@ window.PAGES = window.PAGES || {};
       ctx.onLeave(function () { clearInterval(t); });
     };
   }
-  PAGES.count = make('wedding', 'Until we get married (15 May):');
-  PAGES.next  = make('trip', 'Until we fly to Europe (21 May):',
+  PAGES.count = make('wedding', 'Until we get married (15 May 2027):');
+  PAGES.next  = make('trip', 'Until we fly to Europe (21 May 2027):',
     '<p style="margin:12px 0 0">Placeholder: ideas and plans for the trip will go here.</p>');
 })();

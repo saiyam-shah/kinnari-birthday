@@ -91,6 +91,9 @@
     $('#page').classList.add('on'); $('#page').scrollTop = 0; $('#back').focus();
     crewOn = !!(PAGES[id] && PAGES[id].full); $('#crew').classList.toggle('on', crewOn);
   }
+  document.addEventListener('keydown', function (e) { if (e.key === 'Tab') document.body.classList.add('kb'); });
+  document.addEventListener('mousedown', function () { document.body.classList.remove('kb'); });
+  $('#rotX').onclick = function () { $('#rot').hidden = true; };
   $('#back').onclick = function () { location.hash = ''; };
   window.addEventListener('hashchange', route);
 

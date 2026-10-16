@@ -142,7 +142,7 @@ main{flex:1;min-height:0;position:relative;display:grid;place-items:center;overf
 .lt-inner{overflow:auto;padding:3cqw 4cqw 1.5cqw}
 .lt-inner h2{font-family:Caveat,cursive;font-size:max(30px,3.6cqw);line-height:1;margin:0 0 1.2cqw}
 .lt-inner p{font-family:Caveat,cursive;font-size:max(18px,2cqw);line-height:1.45;margin:0 0 1cqw}
-.lt-inner .lt-sign{margin-top:1.6cqw;text-align:right}
+.lt-inner .lt-sign{margin-top:1.6cqw;text-align:right;white-space:pre-line}
 .lt-close{align-self:center;margin:0 0 2cqw;padding:.7cqw 2cqw;border-radius:99px;border:1.5px solid var(--accent);background:none;cursor:pointer;font-size:max(11px,1.1cqw);color:#4a3a3f}
 .lt-close:hover,.lt-close:focus-visible{background:var(--accent);color:#fff;outline:none}
 
@@ -159,7 +159,7 @@ main{flex:1;min-height:0;position:relative;display:grid;place-items:center;overf
 /* Future: items pinned to the dream board open one dream each (also uses .tl and .tl-card) */
 .fu-pt{position:absolute;z-index:3;padding:0;border:0;background:none;cursor:pointer;border-radius:.8cqw}
 .fu-pt::after{content:"";position:absolute;inset:0;border-radius:.8cqw;box-shadow:0 0 0 2px rgba(255,255,255,.75),0 0 1.8cqw rgba(255,225,170,.9);animation:glow 2.8s ease-in-out infinite}
-.fu-pt.seen::after{animation:none;box-shadow:0 0 0 2px rgba(255,255,255,.35)}
+.fu-pt.seen::after{animation:none;box-shadow:none}
 .fu-pt.seen::before{content:"♥";position:absolute;right:-.5cqw;top:-.5cqw;z-index:1;display:grid;place-items:center;width:2cqw;height:2cqw;min-width:20px;min-height:20px;border-radius:50%;background:#f2a6c0;color:#fff;font-size:max(10px,1cqw)}
 .fu-pt:hover::after,.fu-pt:focus-visible::after{box-shadow:0 0 0 3px #fff,0 0 2.6cqw rgba(255,235,190,1)}
 .fu-pt:focus-visible{outline:none}
@@ -197,3 +197,36 @@ main{flex:1;min-height:0;position:relative;display:grid;place-items:center;overf
 #cb2{left:calc(1.2cqw + 14cqh)}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-.8cqh)}}
 @media (prefers-reduced-motion:reduce){.cf{animation:none}}
+
+/* Places page */
+.pl-intro{margin:0 0 4px}
+.pl-count{margin:0 0 14px;color:var(--soft);font-size:.9em}
+.pl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.pl-card{display:flex;flex-direction:column;align-items:center;gap:4px;padding:16px 10px;text-align:center;font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--pink);border-radius:18px;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.pl-card:hover,.pl-card:focus-visible{transform:translateY(-2px);box-shadow:0 6px 16px rgba(183,132,201,.25)}
+.pl-card.on{border-color:var(--accent)}
+.pl-i{font-size:2em;line-height:1}
+.pl-card small{display:none;color:var(--soft)}
+.pl-card.open small:not(:empty){display:block}
+
+/* focus ring only for keyboard users */
+body:not(.kb) :focus{outline:none}
+
+/* phones held upright: the picture is shown whole at the top, cards sit underneath it */
+#rot{display:none}
+@media (max-width:480px){.cnt .w{display:none}.cnt{padding:4px 9px}}
+@media (max-width:700px) and (orientation:portrait){
+  #rot{display:flex;align-items:center;justify-content:center;gap:10px;flex:none;padding:6px 12px;background:#f2a6c0;color:#3b2f3f;font-size:12px;font-weight:700;z-index:29}
+  #rot[hidden]{display:none}
+  #rot button{border:0;background:none;color:inherit;font-size:14px;cursor:pointer;padding:2px 6px}
+  .tl{place-items:start center}
+  .tl-stage{width:100cqw}
+  .tl-card,.hd-card,.fu-card,.nx-card{left:3%;top:100%;width:94%;margin-top:3cqw;padding:16px 18px;border-radius:18px}
+  .tl-card p,.fu-card p,.nx-card p,.hd-card p{font-size:14px}
+  .tl-card .d,.tl-card .count{font-size:11px}
+  .tl-nav button{padding:9px 0;font-size:14px}
+  .tl-nav{gap:8px;margin-top:10px}
+  .lt-paper{left:3%;top:calc(100% + 3cqw);width:94%;max-height:66cqh}
+  .lt-inner{padding:20px 22px 8px}
+  .lt-close{margin:0 0 14px;padding:8px 18px;font-size:13px}
+}
