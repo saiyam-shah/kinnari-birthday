@@ -1,0 +1,2 @@
+Copy the 52 MB vertical MP4 file into this folder and name it game.mp4.
+Expected full path: assets/videos/game.mp4

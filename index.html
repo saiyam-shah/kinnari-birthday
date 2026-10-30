@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kinnari's Birthday</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="assets/kinnari-icon.png">
+</head>
+<body>
+<header>
+  <div class="brand">Kinnari's Birthday ♥</div>
+  <nav aria-label="Main">
+    <button id="nH" aria-current="true">Home</button>
+    <button id="nE">Explore</button>
+  </nav>
+  <span class="cnt" aria-label="Messages found"><span aria-hidden="true">💌</span> <b id="cm">0</b> / <span id="tm">3</span><span class="w"> messages</span></span>
+  <span class="cnt" aria-label="Treasure Hunt progress"><span aria-hidden="true">🎁</span> <b id="cg">0</b> / <span id="tg">22</span><span class="w"> gifts found</span></span>
+  <button class="hintbtn" id="hintBtn">💡 Hint</button>
+  <div class="musbox">
+    <button class="mus" id="musBtn" aria-label="Music" aria-expanded="false">🎵</button>
+    <div class="panel" id="panel">
+      <p id="trk">Our songs ♥</p>
+      <div class="sp"><div id="spotify"></div></div>
+      <div class="ctl">
+        <button id="pp" aria-label="Play or pause">▶</button>
+        <button id="nx" aria-label="Next song">⏭</button>
+        <button id="sh" aria-label="Shuffle" aria-pressed="false">🔀</button>
+      </div>
+    </div>
+  </div>
+</header>
+<div id="rot" role="note"><span>↻ Turn your phone sideways for the best view</span><button id="rotX" aria-label="Dismiss">✕</button></div>
+
+<main id="main">
+  <section class="stage" id="stage">
+    <img id="hero" src="assets/home.jpg" alt="Happy Birthday Kinnari. The two of you on a balcony at sunset overlooking a coastal town, a golden retriever puppy resting by the wall">
+
+    <!-- The two characters (click for banter). x/y/size are % of the picture. -->
+    <button class="hs" style="left:9.6%;top:23.7%;width:21.7%;height:53%" aria-label="Say hi to him" data-char></button>
+    <button class="hs" style="left:29%;top:33.6%;width:17.8%;height:52%" aria-label="Say hi to her" data-char></button>
+    <button class="hs homeonly" style="left:92.4%;top:23.7%;width:7.6%;height:18%" aria-label="Sticky note" id="ps"></button>
+
+    <!-- Hidden things. data-find must match a key in SITE.finds (js/content.js). -->
+    <button class="hs hid" style="left:1.6%;top:5.8%;width:3.6%;height:7%" aria-label="Pink flower on the left vine" data-find="g:flowerL"></button>
+    <button class="hs hid" style="left:81.2%;top:2.6%;width:3%;height:6%" aria-label="Pink flower on the right vine" data-find="g:flowerR"></button>
+    <button class="hs hid" style="left:73%;top:68%;width:14.4%;height:14.5%" aria-label="Golden retriever puppy" data-find="g:puppy"></button>
+
+    <!-- Twenty-two hidden gift hotspots. Each opens one riddle; answers reveal gifts. -->
+    <button class="hs hid gift-hidden" style="left:2%;top:20%;width:2.6%;height:4%" aria-label="Hidden gift clue 1" data-gift="0"></button>
+    <button class="hs hid gift-hidden" style="left:5%;top:47%;width:2.6%;height:4%" aria-label="Hidden gift clue 2" data-gift="1"></button>
+    <button class="hs hid gift-hidden" style="left:2%;top:70%;width:2.6%;height:4%" aria-label="Hidden gift clue 3" data-gift="2"></button>
+    <button class="hs hid gift-hidden" style="left:3%;top:88%;width:2.6%;height:4%" aria-label="Hidden gift clue 4" data-gift="3"></button>
+
+    <div class="frost">
+      <h2>Where to first, Kinnari?</h2>
+      <p>Explore the site and look for glowing little stars. Tap a star to solve a riddle and uncover a gift. Hidden messages are tucked away too.</p>
+      <p>Click the two of us and we will bicker. Stuck? Tap 💡 Hint at the top for a nudge.</p>
+    </div>
+    <div class="spots" id="spots"></div>
+    <div class="bubble" id="b1" style="left:8%;top:10%"></div>
+    <div class="bubble" id="b2" style="left:30%;top:16%"></div>
+  </section>
+
+  <!-- The two companions: they stand in the corner of every full page and can be clicked to bicker -->
+  <div class="crew" id="crew" aria-label="The two of us">
+    <button class="cf" id="cf1" hidden aria-label="Say hi to him"><img alt=""></button>
+    <button class="cf" id="cf2" hidden aria-label="Say hi to her"><img alt=""></button>
+    <div class="bubble cb" id="cb1"></div>
+    <div class="bubble cb" id="cb2"></div>
+  </div>
+
+  <!-- Every pill opens here, as its own address (#/timeline, #/letter ...) -->
+  <div class="page" id="page"><div class="pin">
+    <button class="back" id="back">← Back to the map</button>
+    <div class="tag" id="ptag"></div>
+    <h1 id="ptitle"></h1>
+    <p id="pdesc"></p>
+    <div class="box" id="pbox"></div>
+  </div></div>
+</main>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true">
+  <div class="mcard"><button class="x" aria-label="Close">×</button><h3 id="mt"></h3><div id="mb"></div></div>
+</div>
+
+<!-- Order matters: content first, then the pages, then the app. -->
+<script src="js/content.js"></script>
+<script src="js/pages/next.js"></script>
+<script src="js/pages/archive.js"></script>
+<script src="js/pages/little-things.js"></script>
+<script src="js/pages/timeline.js"></script>
+<script src="js/pages/movie.js"></script>
+<script src="js/pages/letter.js"></script>
+<script src="js/pages/hundred.js"></script>
+<script src="js/pages/future.js"></script>
+<script src="js/app.js"></script>
+<script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+</body>
+</html>

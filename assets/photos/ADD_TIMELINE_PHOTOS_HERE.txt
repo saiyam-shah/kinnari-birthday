@@ -1,0 +1,5 @@
+Add the four timeline images in this folder using these exact filenames:
+first.jpg
+second.jpg
+third.jpg
+fourth.jpg
