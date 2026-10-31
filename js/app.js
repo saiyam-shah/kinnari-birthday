@@ -39,7 +39,7 @@
     future:   { items:[10,11,12], name:'Future', points:[[50,6],[8,45],[92,70]], hint:'Look where the dreams we share are gathered.' },
     letter:   { items:[13,14,15], name:'Letter', points:[[12,15],[88,30],[20,85]], hint:'A quiet surprise may be hiding among our words.' },
     movie:    { items:[16,17,18], name:'Movie', points:[[10,20],[90,25],[50,6]], hint:'There may be more to notice around our little film.' },
-    suitcase: { items:[19,20], name:'Suitcase of Memories', points:[[15,15],[80,70]], hint:'Try looking around the things we would pack for a trip.' },
+    suitcase: { items:[19,20], name:'Suitcase of Memories', points:[[70,15],[80,15]], hint:'Try looking around the things we would pack for a trip.' },
     hundred:  { items:[21], name:'52 Reasons', points:[[88,12]], hint:'A little something may be tucked among the reasons.' }
   };
 
