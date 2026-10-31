@@ -7,7 +7,7 @@
 
   /* ---------- progress (saved in her browser) ----------
      Developer switches, add to the address:  ?unlock  opens every page,  ?reset  clears progress */
-  var KEY = 'kb2', RESET_KEY = 'kb2-reset-at', RESET_INTERVAL = 24 * 60 * 60 * 1000, S = { m: [], g: [], v: {} };
+  var KEY = 'kb2', RESET_KEY = 'kb2-reset-at', RESET_INTERVAL = 100 * 365 * 24 * 60 * 60 * 1000, S = { m: [], g: [], v: {} };
   var q = new URLSearchParams(location.search), DEV = q.has('unlock');
   var resetAt = Date.now();
   try {

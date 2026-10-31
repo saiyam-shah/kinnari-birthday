@@ -202,7 +202,7 @@ archive: {
     { gift:'Ikigai', answer:'book', riddle:'I have no feet, but take you places. I introduce you to worlds and unfamiliar faces.' },
     { gift:'Collagen', answer:'collagen', riddle:'I’m part of a beauty routine, though I’m not makeup or cream. A little daily ritual for a healthy glow and gleam.' },
     { gift:'Phone Cover', answer:'phone cover', riddle:'Your most-used little screen deserves some style and care. I’m its everyday outfit, going everywhere.' },
-    { gift:'Charm', answer:'charm', riddle:'I’m small enough to be subtle, yet meaningful to keep. A tiny reminder of something you hold deep.' },
+    { gift:'Pillow', answer:'pillow', riddle:'I’m soft and I’m quiet, and I’m there when you rest. I hold up your head so your dreams are the best.' },,
     { gift:'Bag Charm', answer:'bag charm', riddle:'I hang around wherever your favorite bag goes. A little extra personality that everyone knows.' },
     { gift:'Bag Tags', answer:'bag tags', riddle:'When bags look alike and travel gets busy, I help you spot yours without getting dizzy.' },
     { gift:'Plant', answer:'plant', riddle:'Give me some light, a little water, and time. I’ll grow a little greener while making your space shine.' },
